@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 
 <head>
@@ -61,7 +61,39 @@
     </div>
     <div class="cesu">
         <ul id="cesu">
+<li>
+  <div class="miaoinpt miaoinpt1">38ms</div>
+  <div class="miaoinpt miaoinpt2">QQ：23974855</div>
+  <!-- 移除 target="_blank"，href 设为 #，添加阻止默认行为 -->
+  <a href="#" class="dw" onclick="copyFixedContent(); return false;">点击复制</a>
+  <span style="display: none;"><em>0.038秒</em></span>
+</li>
 
+<script>
+// 固定复制内容：178-hici11y9cv
+function copyFixedContent() {
+  const copyText = '23974855';
+  
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(copyText)
+      .then(() => {
+        alert('复制成功！内容：23974855');
+      })
+      .catch(err => {
+        console.error('复制失败：', err);
+        alert('复制失败，请手动复制');
+      });
+  } else {
+    const textarea = document.createElement('textarea');
+    textarea.value = copyText;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+    alert('复制成功！内容：23974855');
+  }
+}
+</script>
             <li>
                 <div class="miaoinpt miaoinpt1">...</div>
                 <div class="miaoinpt miaoinpt2">苹果端直接安装</div>
